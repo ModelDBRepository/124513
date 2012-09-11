@@ -78,9 +78,9 @@ BREAKPOINT {
 }
 
 DERIVATIVE integrate {
-ncai' = -(inca)/depth/FARADAY * (1e7) + (caiinf/3 - ncai)/catau
-lcai' = -(ilca)/depth/FARADAY * (1e7) + (caiinf/3 - lcai)/catau
-tcai' = -(itca)/depth/FARADAY * (1e7) + (caiinf/3 - tcai)/catau
+ncai' = -(inca)/(depth*FARADAY*1e7) + (caiinf/3 - ncai)/catau
+lcai' = -(ilca)/(depth*FARADAY*1e7) + (caiinf/3 - lcai)/catau
+tcai' = -(itca)/(depth*FARADAY*1e7) + (caiinf/3 - tcai)/catau
 }
 
 FUNCTION ktf() (mV) {
