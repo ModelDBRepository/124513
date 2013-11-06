@@ -86,7 +86,7 @@ PROCEDURE rates(v) {  :Computes rate and other constants at current v.
 	sum = alpha+beta        
 	ctau = 1/sum      cinf = alpha/sum
                 :"d" NCa inactivation system
-	alpha = 0.00016/exp(-v/48.4)
+	alpha = 0.00016*exp(-v/48.4) : this line was corrected to match the equation in Aradi and Holmes (1999, page 6)
 	beta = 1/(exp((-v+39)/10)+1)
 	sum = alpha+beta        
 	dtau = 1/sum      dinf = alpha/sum
@@ -116,4 +116,3 @@ FUNCTION vtrap(x,y) {  :Traps for 0 in denominator of rate eqns.
 }
  
 UNITSON
-

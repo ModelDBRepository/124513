@@ -69,6 +69,7 @@ BREAKPOINT {
 }
 
 DERIVATIVE state {	: exact when v held constant; integrates over dt step
+	cai= ncai + lcai + tcai : this line was added to make the channel properly dependent on the current calcium concentration
 	rate(v, cai)
 	o' = (oinf - o)/otau
 }
