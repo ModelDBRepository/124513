@@ -1551,6 +1551,11 @@ cvode.re_init()
 }else{
 fcurrent()
 }
+frecord_init()  // added on March 11, 2014 by Marianne Bezaire. If this is left out, the recording index will
+				// not be reset. It must be reset because the repeated calls to fadvance() during the
+				// while loop above increment the recording index. This means that recordings using the vector
+				// record method (for example, to record soma potential) will have their indices shifted by the
+				// number of times fadvance() was called, causing a delay in the readout of the recorded variable.
 }
 proc continuerun() {local rt
 	eventcount =0
@@ -1654,5 +1659,3 @@ xpanel()
 
 objectvar scene_vector_[1]
 {doNotify()}
-
-
