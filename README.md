@@ -102,7 +102,4 @@ Changelog
 * 20220924: Update MOD files to avoid declaring variables and functions  
             with the same name. See https://github.com/neuronsimulator/nrn/pull/1992  
 * 20221124: hyperde3 and ichan2: drop INITIAL return values, just return
-
----
-
-2025-06-02: Converted README to Markdown.
+* 20250602: Converted README to Markdown.
